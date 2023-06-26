@@ -4,7 +4,7 @@ VALUES ('Riff Raff', 'RandR@frankensteinplace.com', '$2a$10$FB/BOAVhpuLvpOREQVmv
 ('Stevie Budd', 'guests@rosebudmotel.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u'),
 ('Janet Weiss', 'wifetobe@spoiledsweetdamsel.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u'),
 ('Elim Garak', 'garak@simple-tailor.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u'),
-('Moira Rose'), 'VBlake@gmail.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u');
+('Moira Rose', 'VBlake@gmail.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u');
 
 INSERT INTO properties (owner_id, title, description, thumbnail_photo_url, cover_photo_url, cost_per_night, parking_spaces, number_of_bathrooms, number_of_bedrooms, country, street, city, province, post_code, active)
 VALUES (1, 'Frankenstein Place', 'description', 'https://img2.looper.com/img/gallery/the-untold-truth-of-the-rocky-horror-picture-show/frank-n-furters-castle-is-a-luxury-hotel-1601416777.jpg', 'https://img2.looper.com/img/gallery/the-untold-truth-of-the-rocky-horror-picture-show/frank-n-furters-castle-is-a-luxury-hotel-1601416777.jpg', 0, 15, 5, 20, 'United States', '123 Frankenstein Place Way', 'Middle-of-nowhere', 'MA', '90210', true),
