@@ -36,10 +36,18 @@ exports.getUserWithEmail = getUserWithEmail;
  * @param {string} id The id of the user.
  * @return {Promise<{}>} A promise to the user.
  */
-const getUserWithId = function(id) {
-  return Promise.resolve(users[id]);
+const getUserWithId = (id) => {
+  return pool
+    .query(`SELECT * FROM users WHERE id = $1`, [id])
+    .then((result) => {
+      return result.rows[0];
+    })
+    .catch((err) => {
+      console.log(err.message);
+    });
 };
 
+exports.getUserWithId = getUserWithId;
 /**
  * Add a new user to the database.
  * @param {{name: string, password: string, email: string}} user
