@@ -1,3 +1,13 @@
+DROP TABLE IF EXISTS users CASCADE;
+CREATE TABLE IF NOT EXISTS users (id integer, name varchar(255), email varchar(255), password varchar(255), PRIMARY KEY (id));
+
+DROP TABLE IF EXISTS properties CASCADE;
+CREATE TABLE IF NOT EXISTS properties ( id integer, owner_id integer, title varchar(255), description text, thumbnail_photo_url varchar(255), cover_photo_url varchar(255), cost_per_night integer, parking_spaces integer, number_of_bathrooms integer, number_of_bedrooms integer, country varchar(255), street varchar(255), city varchar(255), province varchar(255), post_code varchar(255), active boolean, PRIMARY KEY (id), FOREIGN KEY (owner_id) REFERENCES users(id));
+
+
+
+
+
 INSERT INTO users (name, email, password)
 VALUES ('Riff Raff', 'RandR@frankensteinplace.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u'),
 ('Jake Sisko', 'WithTheProphets@ds9.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u'),
