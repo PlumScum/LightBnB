@@ -86,7 +86,6 @@ const getAllReservations = (guest_id, limit = 10) => {
       console.log(err.message);
     });
 };
-exports.getAllReservations = getAllReservations;
 
 /// Properties
 
