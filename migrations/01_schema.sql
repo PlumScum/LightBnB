@@ -7,8 +7,9 @@ CREATE TABLE IF NOT EXISTS properties ( id integer, owner_id integer, title varc
 DROP TABLE IF EXISTS reservations CASCADE;
 CREATE TABLE IF NOT EXISTS reservations ( id integer, start_date date, end_date date, property_id integer, guest_id integer, PRIMARY KEY (id), FOREIGN KEY (property_id) REFERENCES properties(id), FOREIGN KEY (guest_id) REFERENCES users(id));
 
-
-
+DROP TABLE IF EXISTS property_reviews;
+CREATE TABLE IF NOT EXISTS property_reviews ( id integer, guest_id integer, property_id integer, reservation_id integer, rating smallint, message text, PRIMARY KEY (id), FOREIGN KEY (guest_id) REFERENCES users(id), FOREIGN KEY (property_id) REFERENCES properties (id), FOREIGN KEY (reservation_id) REFERENCES reservations(id) );
+/*
 INSERT INTO users (name, email, password)
 VALUES ('Riff Raff', 'RandR@frankensteinplace.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u'),
 ('Jake Sisko', 'WithTheProphets@ds9.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u'),
@@ -31,3 +32,4 @@ INSERT INTO property_reviews (guest_id, property_id, reservation_id, rating, mes
 VALUES (4, 1, 1, 3, 'message'),
 (5, 2, 2, 5, 'message'),
 (6, 3, 3, 4, 'message');
+*/
