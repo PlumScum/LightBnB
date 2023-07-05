@@ -3,8 +3,8 @@ const users = require("./json/users.json");
 const { Pool } = require('pg');
 
 const pool = new Pool({
-  user: 'postgres',
-  password: 'postgres',
+  user: 'labber',
+  password: 'labber',
   host: 'localhost',
   database: 'lightbnb'
 });
@@ -159,8 +159,6 @@ const getAllProperties = (options, limit = 10) => {
 
   return pool.query(queryString, queryParams).then((res) => res.rows);
 };
-
-exports.getAllProperties = getAllProperties;
 
 /**
  * Add a property to the database
