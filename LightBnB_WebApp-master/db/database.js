@@ -26,8 +26,6 @@ const getUserWithEmail = (email) => {
 
 };
 
-exports.getUserWithEmail = getUserWithEmail;
-
 /**
  * Get a single user from the database given their id.
  * @param {string} id The id of the user.
@@ -44,7 +42,6 @@ const getUserWithId = (id) => {
     });
 };
 
-exports.getUserWithId = getUserWithId;
 /**
  * Add a new user to the database.
  * @param {{name: string, password: string, email: string}} user
@@ -61,7 +58,6 @@ const addUser = (user) => {
       console.log(err.message);
     });
 };
-exports.addUser = addUser;
 
 /// Reservations
 
