@@ -66,3 +66,39 @@ Install the LightBnB_WebApp `npm install`, run it `npm run local`, and view it a
   - `reservation_id` : Foreign Key _`reservations(id)`_
   - `message`
   - `rating`
+
+
+  # Migrations
+## [schema.sql](migrations/01_schema.sql)
+Creates database `lightbnb` and switches to it.
+
+# Sample Queries
+## [getUserByEmail.sql](queries/01_single_user.sql)
+Selects _id, name, email & password_ of a given user; here 'tristanjacobs@gmail.com'.
+```bash
+ id |     name      |          email          |   password
+----+---------------+-------------------------+--------------
+  1 | Devin Sanders | tristanjacobs@gmail.com |  $2a$10$FB...
+(1 row)
+```
+averageLengthOfReservations
+## [averageLengthOfReservations.sql](queries/02_average_reservation_length.sql)
+Selects the average duration of all reservations.
+```bash
+  average_duration   
+---------------------
+ 14.6636000000000000
+(1 row)
+```
+## [listingsByCity.sql](queries/03_property_listings_by_city.sql)
+Shows available details aboput properties in Vancouver including their average rating.
+```bash
+ id  |       title        | cost_per_night |   average_rating   
+-----+--------------------+----------------+--------------------
+ 224 | Nature bite        |          10526 | 4.1000000000000000
+ 197 | Build they         |          34822 | 4.1000000000000000
+  47 | Aside age          |          35421 | 4.2500000000000000
+ 149 | Present television |          53062 | 4.2222222222222222
+(4 rows)
+
+```
