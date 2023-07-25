@@ -1,5 +1,9 @@
 # LightBnB
 
+A database application project developed as a part of _[Lighthouse Labs Web Development](https://www.lighthouselabs.ca/en/web-development)_ course. The front-end is forked from [lighthouse-labs/LightBnB_WebApp](https://github.com/lighthouse-labs/LightBnB_WebApp)
+
+Install the LightBnB_WebApp `npm install`, run it `npm run local`, and view it at `localhost:3000`!
+
 ## Project Structure
 
 ```
