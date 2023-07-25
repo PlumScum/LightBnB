@@ -24,3 +24,45 @@ Install the LightBnB_WebApp `npm install`, run it `npm run local`, and view it a
     * `apiRoutes.js` and `userRoutes.js` are responsible for any HTTP requests to `/users/something` or `/api/something`. 
   * `server.js` Connecting the routes to the database, this is the entry point to the application
 * `database.js` is responsible for all queries to the database. It doesn't currently connect to any database, all it does is return data from `.json` files.
+
+# ERD
+## Diagram
+![ERD](docs/ERD.png)
+## ERD Info
+- _`users`_
+  - `id`: Primary Key
+  - `name`
+  - `email`
+  - `password`
+  
+- _`properties`_
+  - `id`: Primary Key
+  - `title`
+  - `description`
+  - `thumbnail_photo_url`
+  - `cover_photo_url`  
+  - `owner_id` : Foreign Key _`users(id)`_
+  - `cost_per_night`
+  - `country`
+  - `street`
+  - `city`
+  - `province`
+  - `postal_code`
+  - `parking_spaces`
+  - `number_of_bedrooms`
+  - `number_of_bathrooms`
+
+- _`reservations`_
+  - `id`: Primary Key
+  - `start_date`
+  - `end_date`
+  - `property_id` : Foreign Key _`properties(id)`_
+  - `guset_id` : Foreign Key _`users_id(id)`_
+
+- _`property_reviews`_
+  - `id`: Primary Key
+  - `guest_id` : Foreign Key _`users(id)`_
+  - `property_id` : Foreign Key _`properties(id)`_
+  - `reservation_id` : Foreign Key _`reservations(id)`_
+  - `message`
+  - `rating`
